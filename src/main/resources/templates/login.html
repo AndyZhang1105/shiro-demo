@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:shiro="http://www.thymeleaf.org/thymeleaf-extras-shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="shortcut icon" href="#"/>
+</head>
+<body>
+<div>
+    <form name="login" action="/login" method="post">
+        <input type="text" name="username">
+        <input type="text" name="password">
+        <input type="submit" name="submit">
+        <br>
+        <span th:text="${msg}"></span>
+    </form>
+</div>
+</body>
+</html>

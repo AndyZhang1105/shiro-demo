@@ -55,7 +55,7 @@ public class MyRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;
         Account account = accountService.findByUsername(token.getUsername());
-        if(account != null){
+        if(account != null) {
             return new SimpleAuthenticationInfo(account, account.getPassword(), getName());
         }
         return null;

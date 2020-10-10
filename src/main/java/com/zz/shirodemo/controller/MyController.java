@@ -19,7 +19,7 @@ public class MyController {
     }
 
     @PostMapping("/login")
-    public String login(String username, String password, Model model){
+    public String login(String username, String password, Model model) {
         Subject subject = SecurityUtils.getSubject();
         UsernamePasswordToken token = new UsernamePasswordToken(username, password);
         try {

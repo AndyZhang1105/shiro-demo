@@ -39,6 +39,9 @@ public class ShiroConfig {
         map.put("/main","authc");
         map.put("/manage","perms[manage]");
         map.put("/administrator","roles[administrator]");
+
+        map.put("/private","roles[administrator]");
+
         factoryBean.setFilterChainDefinitionMap(map);
         //设置登录页面
         factoryBean.setLoginUrl("/login");
